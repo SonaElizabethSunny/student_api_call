@@ -1,6 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const SearchProduct = () => {
+  const [input, changeInput]= useState(
+    {productname:""}
+  )
+  const inputHandler=(event)=>{
+    changeInput({...input,[event.target.name]:event.target.value})
+  }
+  const readValues=()=>{
+    console.log(input)
+  }
+  
   return (
     <div>
 
